@@ -24,7 +24,7 @@ handles known discontinuities, and plots residuals.
     ```bash
     python scripts/gnss_timeseries_lsq.py
     ```
-5. Check the output in the directory figs.
+5. Check the output in the directory 'figs'.
 
 ## 📜 License
 
