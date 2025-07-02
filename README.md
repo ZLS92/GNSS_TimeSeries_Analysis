@@ -34,9 +34,7 @@ Y(ti) = A + B * ti
 - *H()*: Heaviside step function
 - *ω = 2π* (annual frequency in decimal years)
 
----
-
-## 🧮 Least Squares Estimation
+🧮 Least Squares Estimation
 
 The model parameters (*A, B, C, D, E, F, Gk*) are estimated using the **Least Squares Method (LSQ)**:
 
