@@ -31,8 +31,19 @@ import numpy as np
 # e,n,u = east, north, up components
 #Es: key 'ae_enu' = list with linear trend + annual component estimated values, for east north up componets
 
-pord = gnss_sql('PORD.IGS08.tenv.txt', ['12OCT25'], 'PORD')
-codr = gnss_sql('CODR.IGS08.tenv.txt', [], 'CODR')
-#mpra = gps_sql('MPRA.IGS08.tenv.txt', ['07JUN01'], 'MPRA')
-#barc = gps_sql('BARC.IGS08.tenv.txt', [], 'BARC')
+# System separator
+s = os.sep 
+
+# Home dir
+home_dir = os.path.dirname( os.path.dirname( __file__ ) )
+
+
+pord = gnss_sql( input_file_name = home_dir +s+ 'data' +s+ 'PORD.IGS08.tenv.txt', 
+                 events = ['12OCT25'], 
+                 output_fig = home_dir +s+ 'figs' +s+ 'PORD' )
+
+codr = gnss_sql( input_file_name = home_dir +s+ 'data' +s+'CODR.IGS08.tenv.txt', 
+                 events = [], 
+                 output_fig =  home_dir +s+ 'figs' +s+ 'CODR')
+
 # -----------------------------------------------------------------------------

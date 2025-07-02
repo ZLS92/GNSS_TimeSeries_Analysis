@@ -5,7 +5,7 @@ Created on Wed Feb  5 09:04:26 2020
 @author: zampa
 """
 
-def gnss_sql(input_file_name, events, output_fig_name):
+def gnss_sql(input_file_name, events, output_fig):
     
     import inspect, os
     folder_path = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
@@ -115,8 +115,8 @@ def gnss_sql(input_file_name, events, output_fig_name):
     
     plt.subplots_adjust(wspace=0.11, hspace=0.08,
                         top=0.9, bottom=0.12, right=0.98, left=0.09)
-    plt.suptitle(output_fig_name)
-    plt.savefig('Linear trend_'+output_fig_name)    
+    plt.suptitle( os.path.basename(output_fig))
+    plt.savefig( output_fig +'_linear_trend.png' )    
     
     #%% Linear trend + annual component ---------------------------------------
     
@@ -207,8 +207,8 @@ def gnss_sql(input_file_name, events, output_fig_name):
     
     plt.subplots_adjust(wspace=0.11, hspace=0.08,
                         top=0.9, bottom=0.12, right=0.98, left=0.09)
-    plt.suptitle(output_fig_name)
-    plt.savefig('Trend_+_Annual_comp'+output_fig_name) 
+    plt.suptitle( os.path.basename( output_fig ) )
+    plt.savefig( output_fig+'_trend_annual.png' )   
     
     # -------------------------------------------------------------------------
     
